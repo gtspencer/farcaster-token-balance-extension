@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Farcaster Balances Settings</title>
+    <style>
+      :root { color-scheme: dark; }
+      body {
+        margin: 0; padding: 12px; width: 320px;
+        font: 13px/1.4 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+        background: #121214; color: #e6e6e6;
+      }
+      .row { display: grid; grid-template-columns: 92px 1fr; gap: 8px; align-items: center; margin-bottom: 8px; }
+      label { opacity: .85; }
+      input {
+        width: 100%; padding: 6px 8px; border-radius: 6px; border: 1px solid #2b2b2f;
+        background: #1a1a1e; color: #fff; outline: none;
+      }
+      .actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 10px; }
+      button {
+        padding: 6px 10px; border-radius: 6px; border: 1px solid #3b3b45;
+        background: #22222a; color: #fff; cursor: pointer; font-size: 12px;
+      }
+      button:hover { background: #2a2a34; }
+      .danger { border-color: #6b2a2a; background: #3a1d1d; }
+      .hint { margin-top: 6px; font-size: 12px; opacity: .7; }
+      .ok { color: #6ce36c; }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <label for="rpc">RPC URL</label>
+      <input id="rpc" placeholder="https://mainnet.base.org" />
+    </div>
+    <div class="row">
+      <label for="contract">Contract</label>
+      <input id="contract" placeholder="0x... (ERC-20)" />
+    </div>
+    <div class="row">
+      <label for="neynar">Neynar Key</label>
+      <input id="neynar" placeholder="api key..." />
+    </div>
+    <div class="row">
+      <label for="symbol">Symbol</label>
+      <input id="symbol" placeholder="e.g. BETR" />
+    </div>
+
+    <div class="actions">
+      <button id="save">Save</button>
+      <button id="clear" class="danger">Clear Cache</button>
+    </div>
+    <div id="status" class="hint"></div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

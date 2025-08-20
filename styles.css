@@ -1,0 +1,65 @@
+.fcb-panel {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 2147483647;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  backdrop-filter: saturate(1.2) blur(6px);
+  border-radius: 10px;
+  padding: 12px;
+  width: 320px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.fcb-row {
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+.fcb-row label { opacity: 0.8; }
+.fcb-row input {
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  outline: none;
+}
+.fcb-row input::placeholder { color: rgba(255,255,255,0.5); }
+
+.fcb-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+.fcb-actions button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+.fcb-actions button:hover { background: rgba(255,255,255,0.15); }
+.fcb-actions button.danger { border-color: rgba(255, 75, 75, 0.6); background: rgba(255, 75, 75, 0.15); }
+.fcb-actions button.ghost { background: transparent; border-color: rgba(255,255,255,0.2); }
+
+.fcb-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 6px;
+  font-size: 11px;
+  line-height: 18px;
+  border-radius: 10px;
+  background: rgba(120, 70, 255, 0.12);
+  color: #804dff;
+  border: 1px solid rgba(120,70,255,0.3);
+  vertical-align: middle;
+}

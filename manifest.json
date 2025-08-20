@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Farcaster Token Balances",
+  "version": "0.1.0",
+  "description": "Show ERC-20 balances next to Farcaster usernames.",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": [
+    "*://farcaster.xyz/*",
+    "*://*.farcaster.xyz/*",
+    "https://api.neynar.com/*",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Farcaster Balances",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://farcaster.xyz/*", "*://*.farcaster.xyz/*"],
+      "js": ["contentScript.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
