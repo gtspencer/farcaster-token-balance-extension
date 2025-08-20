@@ -5,14 +5,13 @@
   "description": "Show ERC-20 balances next to Farcaster usernames.",
   "permissions": [
     "storage",
-    "tabs"
+    "activeTab"
   ],
   "host_permissions": [
     "*://farcaster.xyz/*",
     "*://*.farcaster.xyz/*",
     "https://api.neynar.com/*",
-    "https://*/*",
-    "http://*/*"
+    "https://mainnet.base.org/*"
   ],
   "background": {
     "service_worker": "background.js"
